@@ -7,14 +7,15 @@ type Product interface {
 
 // NewProduct create a product
 func NewProduct(name string) Product {
+	var p Product
 	switch name {
 	case "product1":
-		return new(product1)
+		p = new(product1)
 	case "product2":
-		return &product2{"product2"}
-	default:
-		return nil
+		p = &product2{"product2"}
 	}
+
+	return p
 }
 
 type product1 struct {
