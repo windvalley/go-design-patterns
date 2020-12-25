@@ -12,55 +12,54 @@ Defers instantiation of an object to a specialized function for creating instanc
 Provides an interface for creating families of releated objects.
 - [x] [Singleton](/singleton/)  
 Restricts instantiation of a type to one object.
-- [] [Builder](/builder/)  
+- [ ] [Builder](/builder/)  
 Split a large object into multiple small objects, then assemble multiple small objects into large objects, and hide the construction process from the outside.
-- [] [Prototype](/prototype/)  
+- [ ] [Prototype](/prototype/)  
 Return a new instance by copying an existing instance, rather than creating a new one, which is mostly used to create complex or time-consuming instances.
 
 ## Structural Patterns
 
-- [] [Proxy](/proxy/)  
+- [ ] [Proxy](/proxy/)  
 Provides a surrogate for an object to control it's actions.
-- [] [Bridge](/bridge/)  
+- [ ] [Bridge](/bridge/)  
 Decouples an interface from its implementation so that the two can vary independently.
-- [] [Decorator](/decorator/)  
+- [ ] [Decorator](/decorator/)  
 Adds behavior to an object, statically or dynamically.
-- [] [Adapter](/adapter/)  
+- [ ] [Adapter](/adapter/)  
 Convert incompatible interfaces to compatible interfaces so that objects that cannot work together due to incompatible interfaces can work together.
-- [] [Facade](/facade/)  
+- [ ] [Facade](/facade/)  
 Uses one type as an API to a number of others.
-- [] [Composite](/composite/)  
+- [ ] [Composite](/composite/)  
 Encapsulates and provides access to a number of different objects.
-- [] [Flyweight](/flyweight/)  
+- [ ] [Flyweight](/flyweight/)  
 Reuses existing instances of objects with similar/identical state to minimize resource usage.
 
 ## Behavioral Patterns
 
-- [] [Observer](/behavioral/)  
+- [ ] [Observer](/behavioral/)  
 Provide a callback for notification of events/changes to data.
-- [] [TemplateMethod](/template_method/)  
+- [ ] [TemplateMethod](/template_method/)  
 Defines a skeleton class which defers some methods to subclasses.
-- [] [Strategy](/strategy/)  
+- [ ] [Strategy](/strategy/)  
 Enables an algorithm's behavior to be selected at runtime.
-- [] [ChainOfResponsibility](/chain_of_responsibility/)  
+- [ ] [ChainOfResponsibility](/chain_of_responsibility/)  
 Avoids coupling a sender to receiver by giving more than object a chance to handle the request.
-- [] [State](/state/)  
+- [ ] [State](/state/)  
 Encapsulates varying behavior for the same object based on its internal state.
-- [] [Iterator](/iterator/)  
+- [ ] [Iterator](/iterator/)  
 Split complex traversal operations into iterator objects.
-- [] [Visitor](/visitor/)  
+- [ ] [Visitor](/visitor/)  
 Separates an algorithm from an object on which it operates.
 - [] [Memento](/memento/)  
 Generate an opaque token that can be used to go back to a previous state.
-- [] [Command](/command/)  
+- [ ] [Command](/command/)  
 Bundles a command and arguments to call later.
-- [] [Interpreter](/interpreter/)  
+- [ ] [Interpreter](/interpreter/)  
 Defines a grammatical representation for a language and provides an interpreter to deal with this grammar.
-- [] [Mediator](/mediator/)  
+- [ ] [Mediator](/mediator/)  
 Connects objects and acts as a proxy.
 
 ## Other Patterns
 
-- [] [Profile Timing](/profile_timing/)  
+- [ ] [Profile Timing](/profile_timing/)  
 Measure the execution time of some functions for code optimization.
-
