@@ -12,7 +12,7 @@ Defers instantiation of an object to a specialized function for creating instanc
 Provides an interface for creating families of releated objects.
 - [x] [Singleton](/singleton/)  
 Restricts instantiation of a type to one object.
-- [ ] [Builder](/builder/)  
+- [x] [Builder](/builder/)  
 Split a large object into multiple small objects, then assemble multiple small objects into large objects, and hide the construction process from the outside.
 - [ ] [Prototype](/prototype/)  
 Return a new instance by copying an existing instance, rather than creating a new one, which is mostly used to create complex or time-consuming instances.
@@ -20,7 +20,7 @@ Return a new instance by copying an existing instance, rather than creating a ne
 ## Structural Patterns
 
 - [ ] [Proxy](/proxy/)  
-Provides a surrogate for an object to control it's actions.
+Provides a surrogate for an object to control it's actions, for example, to delay its actions or to perform other processing before and after its actions.
 - [ ] [Bridge](/bridge/)  
 Decouples an interface from its implementation so that the two can vary independently.
 - [ ] [Decorator](/decorator/)  
@@ -38,11 +38,11 @@ Reuses existing instances of objects with similar/identical state to minimize re
 
 - [ ] [Observer](/behavioral/)  
 Provide a callback for notification of events/changes to data.
-- [ ] [TemplateMethod](/template_method/)  
+- [ ] [Template Method](/template_method/)  
 Defines a skeleton class which defers some methods to subclasses.
 - [ ] [Strategy](/strategy/)  
 Enables an algorithm's behavior to be selected at runtime.
-- [ ] [ChainOfResponsibility](/chain_of_responsibility/)  
+- [ ] [Chain of Responsibility](/chain_of_responsibility/)  
 Avoids coupling a sender to receiver by giving more than object a chance to handle the request.
 - [ ] [State](/state/)  
 Encapsulates varying behavior for the same object based on its internal state.
@@ -50,7 +50,7 @@ Encapsulates varying behavior for the same object based on its internal state.
 Split complex traversal operations into iterator objects.
 - [ ] [Visitor](/visitor/)  
 Separates an algorithm from an object on which it operates.
-- [] [Memento](/memento/)  
+- [ ] [Memento](/memento/)  
 Generate an opaque token that can be used to go back to a previous state.
 - [ ] [Command](/command/)  
 Bundles a command and arguments to call later.
