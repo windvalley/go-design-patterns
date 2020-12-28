@@ -14,7 +14,7 @@ Provides an interface for creating families of releated objects.
 Restricts instantiation of a type to one object.
 - [x] [Builder](/builder/)  
 Split a large object into multiple small objects, then assemble multiple small objects into large objects, and hide the construction process from the outside.
-- [ ] [Prototype](/prototype/)  
+- [x] [Prototype](/prototype/)  
 Return a new instance by copying an existing instance, rather than creating a new one, which is mostly used to create complex or time-consuming instances.
 
 ## Structural Patterns

@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestNewSingleton(t *testing.T) {
+func TestNewBar(t *testing.T) {
 	testTimes := 100
 	wg := sync.WaitGroup{}
 	wg.Add(testTimes)
@@ -13,14 +13,14 @@ func TestNewSingleton(t *testing.T) {
 	for i := 0; i < testTimes; i++ {
 		go func() {
 			defer wg.Done()
-			instance := NewSingleton()
+			instance := NewBar()
 			instance.Increment()
 		}()
 	}
 
 	wg.Wait()
 
-	instance := NewSingleton()
+	instance := NewBar()
 	count := instance.GetCount()
 
 	if count != testTimes {
