@@ -19,7 +19,7 @@ Return a new instance by copying an existing instance, rather than creating a ne
 
 ## Structural Patterns
 
-- [ ] [Proxy](/proxy/)  
+- [x] [Proxy](/proxy/)  
 Provides a surrogate for an object to control it's actions, for example, to delay its actions or to perform other processing before and after its actions.
 - [ ] [Bridge](/bridge/)  
 Decouples an interface from its implementation so that the two can vary independently.
