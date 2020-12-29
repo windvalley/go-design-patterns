@@ -5,31 +5,27 @@ type Subject interface {
 	DoTask() string
 }
 
-// ConcreteSubject ...
-type ConcreteSubject struct{}
+type concreteSubject struct{}
 
 // NewConcreteSubject ...
 func NewConcreteSubject() Subject {
-	return &ConcreteSubject{}
+	return &concreteSubject{}
 }
 
-// DoTask ...
-func (*ConcreteSubject) DoTask() string {
+func (*concreteSubject) DoTask() string {
 	return "SubjectTask"
 }
 
-// Proxy ...
-type Proxy struct {
+type proxy struct {
 	subject Subject
 }
 
 // NewProxy ...
 func NewProxy(s Subject) Subject {
-	return &Proxy{s}
+	return &proxy{s}
 }
 
-// DoTask ...
-func (p *Proxy) DoTask() string {
+func (p *proxy) DoTask() string {
 	result := "ProxyPreTask-"
 
 	result += p.subject.DoTask()
