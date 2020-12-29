@@ -1,27 +1,35 @@
 package proxy
 
-// Subject subject
+// Subject ...
 type Subject interface {
 	DoTask() string
 }
 
-type concreteSubject struct{}
+// ConcreteSubject ...
+type ConcreteSubject struct{}
 
-func (*concreteSubject) DoTask() string {
+// NewConcreteSubject ...
+func NewConcreteSubject() Subject {
+	return &ConcreteSubject{}
+}
+
+// DoTask ...
+func (*ConcreteSubject) DoTask() string {
 	return "SubjectTask"
 }
 
-// Proxy proxy
+// Proxy ...
 type Proxy struct {
-	subject *concreteSubject
+	subject Subject
 }
 
-// DoTask do task
-func (p *Proxy) DoTask() string {
-	if p.subject == nil {
-		p.subject = new(concreteSubject)
-	}
+// NewProxy ...
+func NewProxy(s Subject) Subject {
+	return &Proxy{s}
+}
 
+// DoTask ...
+func (p *Proxy) DoTask() string {
 	result := "ProxyPreTask-"
 
 	result += p.subject.DoTask()

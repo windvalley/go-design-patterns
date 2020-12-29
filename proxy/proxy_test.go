@@ -7,10 +7,13 @@ import (
 )
 
 func TestProxy(t *testing.T) {
-	expected := "ProxyPreTask-SubjectTask-ProxyAfterTask"
+	expected := "SubjectTask"
+	subject := NewConcreteSubject()
+	result := subject.DoTask()
+	assert.Equal(t, expected, result, "they should be equal")
 
-	proxy := new(Proxy)
-	result := proxy.DoTask()
-
+	expected = "ProxyPreTask-SubjectTask-ProxyAfterTask"
+	proxy := NewProxy(subject)
+	result = proxy.DoTask()
 	assert.Equal(t, expected, result, "they should be equal")
 }
