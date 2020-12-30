@@ -26,28 +26,28 @@ func (d *Director) Build() *Product {
 	return d.builder.GetProduct().(*Product)
 }
 
-// ConcreteBuilder a concrete builer
-type ConcreteBuilder struct {
+type concreteBuilder struct {
 	product *Product
 }
 
-// NewProduct init a product
-func (b *ConcreteBuilder) NewProduct() {
+// NewConcreteBuilder ...
+func NewConcreteBuilder() Builder {
+	return &concreteBuilder{}
+}
+
+func (b *concreteBuilder) NewProduct() {
 	b.product = new(Product)
 }
 
-// BuildPartA build part
-func (b *ConcreteBuilder) BuildPartA() {
+func (b *concreteBuilder) BuildPartA() {
 	b.product.content += "parta"
 }
 
-// BuildPartB build part
-func (b *ConcreteBuilder) BuildPartB() {
+func (b *concreteBuilder) BuildPartB() {
 	b.product.content += "partb"
 }
 
-// GetProduct get product
-func (b *ConcreteBuilder) GetProduct() interface{} {
+func (b *concreteBuilder) GetProduct() interface{} {
 	return b.product
 }
 
