@@ -21,7 +21,7 @@ Return a new instance by copying an existing instance, rather than creating a ne
 
 - [x] [Proxy](/proxy/)  
 Provides a surrogate for an object to control it's actions, for example, to delay its actions or to perform other processing before and after its actions.
-- [ ] [Bridge](/bridge/)  
+- [x] [Bridge](/bridge/)  
 Decouples an interface from its implementation so that the two can vary independently.
 - [ ] [Decorator](/decorator/)  
 Adds behavior to an object, statically or dynamically.
@@ -30,7 +30,7 @@ Convert incompatible interfaces to compatible interfaces so that objects that ca
 - [ ] [Facade](/facade/)  
 Uses one type as an API to a number of others.
 - [ ] [Composite](/composite/)  
-Encapsulates and provides access to a number of different objects.
+Sometimes it is more directly called the tree pattern, which is used to unify the access of leaf node objects and non-leaf node objects.
 - [ ] [Flyweight](/flyweight/)  
 Reuses existing instances of objects with similar/identical state to minimize resource usage.
 
