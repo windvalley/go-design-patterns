@@ -11,8 +11,8 @@ type ConcreteObject struct {
 }
 
 // GetScore implement Object
-func (cb *ConcreteObject) GetScore() int {
-	return cb.score
+func (co *ConcreteObject) GetScore() int {
+	return co.score
 }
 
 // ConcreteObjectWithDecorate decorator
@@ -22,11 +22,11 @@ type ConcreteObjectWithDecorate struct {
 }
 
 // NewConcreteObjectWithDecorate ...
-func NewConcreteObjectWithDecorate(cb Object, scorePlus int) Object {
-	return &ConcreteObjectWithDecorate{cb, scorePlus}
+func NewConcreteObjectWithDecorate(co Object, scorePlus int) Object {
+	return &ConcreteObjectWithDecorate{co, scorePlus}
 }
 
 // GetScore implement Object
-func (cbd *ConcreteObjectWithDecorate) GetScore() int {
-	return cbd.Object.GetScore() + cbd.scorePlus
+func (cod *ConcreteObjectWithDecorate) GetScore() int {
+	return cod.Object.GetScore() + cod.scorePlus
 }
