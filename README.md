@@ -23,7 +23,7 @@ Return a new instance by copying an existing instance, rather than creating a ne
 Provides a surrogate for an object to control it's actions, for example, to delay its actions or to perform other processing before and after its actions.
 - [x] [Bridge](/bridge/)  
 Decouples an interface from its implementation so that the two can vary independently.
-- [ ] [Decorator](/decorator/)  
+- [x] [Decorator](/decorator/)  
 Adds behavior to an object, statically or dynamically.
 - [ ] [Adapter](/adapter/)  
 Convert incompatible interfaces to compatible interfaces so that objects that cannot work together due to incompatible interfaces can work together.
