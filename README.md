@@ -25,7 +25,7 @@ Provides a surrogate for an object to control it's actions, for example, to dela
 Decouples an interface from its implementation so that the two can vary independently.
 - [x] [Decorator](/decorator/)  
 Adds behavior to an object, statically or dynamically.
-- [ ] [Adapter](/adapter/)  
+- [x] [Adapter](/adapter/)  
 Convert incompatible interfaces to compatible interfaces so that objects that cannot work together due to incompatible interfaces can work together.
 - [ ] [Facade](/facade/)  
 Uses one type as an API to a number of others.
