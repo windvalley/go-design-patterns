@@ -29,7 +29,7 @@ Adds behavior to an object, statically or dynamically.
 Convert incompatible interfaces to compatible interfaces so that objects that cannot work together due to incompatible interfaces can work together.
 - [x] [Facade](/facade/)  
 Uses one type as an API to a number of others.
-- [ ] [Composite](/composite/)  
+- [x] [Composite](/composite/)  
 Sometimes it is more directly called the tree pattern, which is used to unify the access of leaf node objects and non-leaf node objects.
 - [ ] [Flyweight](/flyweight/)  
 Reuses existing instances of objects with similar/identical state to minimize resource usage.
