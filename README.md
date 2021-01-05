@@ -31,7 +31,7 @@ Convert incompatible interfaces to compatible interfaces so that objects that ca
 Uses one type as an API to a number of others.
 - [x] [Composite](/composite/)  
 Sometimes it is more directly called the tree pattern, which is used to unify the access of leaf node objects and non-leaf node objects.
-- [ ] [Flyweight](/flyweight/)  
+- [x] [Flyweight](/flyweight/)  
 Reuses existing instances of objects with similar/identical state to minimize resource usage.
 
 ## Behavioral Patterns
