@@ -36,7 +36,7 @@ Reuses existing instances of objects with similar/identical state to minimize re
 
 ## Behavioral Patterns
 
-- [ ] [Observer](/behavioral/)  
+- [x] [Observer](/behavioral/)  
 Provide a callback for notification of events/changes to data.
 - [ ] [Template Method](/template_method/)  
 Defines a skeleton class which defers some methods to subclasses.
