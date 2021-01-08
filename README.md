@@ -40,12 +40,14 @@ Reuses existing instances of objects with similar/identical state to minimize re
 The observer pattern allows a type instance to publish events to other type instances(observers) who wish to be updated when a particular event occurs.
 - [x] [Template Method](/template_method/)  
 Defines a skeleton class which defers some methods to subclasses.
-- [ ] [Strategy](/strategy/)  
+- [x] [Strategy](/strategy/)  
 Enables an algorithm's behavior to be selected at runtime.
 - [ ] [Chain of Responsibility](/chain_of_responsibility/)  
 Avoids coupling a sender to receiver by giving more than object a chance to handle the request.
 - [ ] [State](/state/)  
-Encapsulates varying behavior for the same object based on its internal state.
+Encapsulates varying behavior for the same object based on its internal state;
+The main point is create objects representing various states, 
+and a context object whose behavior changes as its internal state object changes.
 - [ ] [Iterator](/iterator/)  
 Split complex traversal operations into iterator objects.
 - [ ] [Visitor](/visitor/)  
