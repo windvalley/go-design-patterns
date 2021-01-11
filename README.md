@@ -42,7 +42,7 @@ The observer pattern allows a type instance to publish events to other type inst
 Defines a skeleton class which defers some methods to subclasses.
 - [x] [Strategy](/strategy/)  
 Enables an algorithm's behavior to be selected at runtime.
-- [ ] [Chain of Responsibility](/chain_of_responsibility/)  
+- [x] [Chain of Responsibility](/chain_of_responsibility/)  
 Avoids coupling a sender to receiver by giving more than object a chance to handle the request.
 - [ ] [State](/state/)  
 Encapsulates varying behavior for the same object based on its internal state;
