@@ -44,16 +44,20 @@ Defines a skeleton class which defers some methods to subclasses.
 Enables an algorithm's behavior to be selected at runtime.
 - [x] [Chain of Responsibility](/chain_of_responsibility/)  
 Avoids coupling a sender to receiver by giving more than object a chance to handle the request.
-- [ ] [State](/state/)  
+- [x] [State](/state/)  
 Encapsulates varying behavior for the same object based on its internal state;
 The main point is create objects representing various states, 
 and a context object whose behavior changes as its internal state object changes.
 - [ ] [Iterator](/iterator/)  
 Split complex traversal operations into iterator objects.
 - [ ] [Visitor](/visitor/)  
-Separates an algorithm from an object on which it operates.
+Separates an algorithm from an object on which it operates;
+The element object accepts the visitor object so that the visitor object can handle operations on the element object.
+The intention is to separate data structure from data manipulation.
+To solve the coupling problem between stable data structure and volatile operation.
 - [ ] [Memento](/memento/)  
-Generate an opaque token that can be used to go back to a previous state.
+Capture the internal state of an object and save this state outside the object, 
+so that the object can be restored to the original state in the future.
 - [ ] [Command](/command/)  
 Bundles a command and arguments to call later.
 - [ ] [Interpreter](/interpreter/)  
