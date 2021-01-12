@@ -63,9 +63,40 @@ Bundles a command and arguments to call later.
 - [ ] [Interpreter](/interpreter/)  
 Defines a grammatical representation for a language and provides an interpreter to deal with this grammar.
 - [ ] [Mediator](/mediator/)  
-Connects objects and acts as a proxy.
+Mediator connects objects and acts as a proxy.
 
 ## Other Patterns
 
-- [ ] [Profile Timing](/profile_timing/)  
+### Synchronization Patterns
+
+- [ ] [Semaphore](/semaphore/)
+Allows controlling access to a common resource.
+
+### Concurrency Patterns
+
+- [ ] [Parallelism](/parallelism/)
+Completes large number of independent tasks.
+- [ ] [Bounded Parallelism](/bounded_parallelism/)
+Completes large number of independent tasks with resource limits.
+- [ ] [Generators](/generators/)
+Yields a sequence of values one at a time.
+
+### Messaging Patterns
+
+- [ ] [Funnel In](/funnel_in/)
+Funnels tasks to a work sink (e.g. server).
+- [ ] [Funnel Out](/funnel_out/)
+Distributes tasks among workers (e.g. producer).
+- [ ] [Publish Subscribe](/publish_subscribe/)
+Passes information to a collection of recipients who subscribed to a topic.
+
+### Stability Patterns
+
+- [ ] [Circuit Breaker](/circuit_breaker/)
+Stops the flow of the requests when requests are likely to fail.
+
+### Profiling Patterns
+
+- [ ] [Profile Timing](/profile_timing/)
 Measure the execution time of some functions for code optimization.
+
