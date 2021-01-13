@@ -16,6 +16,8 @@ Restricts instantiation of a type to one object.
 Split a large object into multiple small objects, then assemble multiple small objects into large objects, and hide the construction process from the outside.
 - [x] [Prototype](/prototype/)  
 Return a new instance by copying an existing instance, rather than creating a new one, which is mostly used to create complex or time-consuming instances.
+- [x] [Object Pool](/object_pool/)  
+Instantiates and maintains a group of objects instances of the same type.
 
 ## Structural Patterns
 
@@ -69,34 +71,33 @@ Mediator connects objects and acts as a proxy.
 
 ### Synchronization Patterns
 
-- [ ] [Semaphore](/semaphore/)
+- [ ] [Semaphore](/semaphore/)  
 Allows controlling access to a common resource.
 
 ### Concurrency Patterns
 
-- [ ] [Parallelism](/parallelism/)
+- [ ] [Parallelism](/parallelism/)  
 Completes large number of independent tasks.
-- [ ] [Bounded Parallelism](/bounded_parallelism/)
+- [ ] [Bounded Parallelism](/bounded_parallelism/)  
 Completes large number of independent tasks with resource limits.
-- [ ] [Generators](/generators/)
+- [ ] [Generators](/generators/)  
 Yields a sequence of values one at a time.
 
 ### Messaging Patterns
 
-- [ ] [Funnel In](/funnel_in/)
+- [ ] [Funnel In](/funnel_in/)  
 Funnels tasks to a work sink (e.g. server).
-- [ ] [Funnel Out](/funnel_out/)
+- [ ] [Funnel Out](/funnel_out/)  
 Distributes tasks among workers (e.g. producer).
-- [ ] [Publish Subscribe](/publish_subscribe/)
+- [ ] [Publish Subscribe](/publish_subscribe/)  
 Passes information to a collection of recipients who subscribed to a topic.
 
 ### Stability Patterns
 
-- [ ] [Circuit Breaker](/circuit_breaker/)
+- [ ] [Circuit Breaker](/circuit_breaker/)  
 Stops the flow of the requests when requests are likely to fail.
 
 ### Profiling Patterns
 
-- [ ] [Profile Timing](/profile_timing/)
+- [ ] [Profile Timing](/profile_timing/)  
 Measure the execution time of some functions for code optimization.
-
