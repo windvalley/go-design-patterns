@@ -50,7 +50,7 @@ Avoids coupling a sender to receiver by giving more than object a chance to hand
 Encapsulates varying behavior for the same object based on its internal state;
 The main point is create objects representing various states, 
 and a context object whose behavior changes as its internal state object changes.
-- [ ] [Iterator](/iterator/)  
+- [x] [Iterator](/iterator/)  
 Split complex traversal operations into iterator objects.
 - [ ] [Visitor](/visitor/)  
 Separates an algorithm from an object on which it operates;
@@ -89,8 +89,6 @@ Yields a sequence of values one at a time.
 Funnels tasks to a work sink (e.g. server).
 - [ ] [Funnel Out](/funnel_out/)  
 Distributes tasks among workers (e.g. producer).
-- [ ] [Publish Subscribe](/publish_subscribe/)  
-Passes information to a collection of recipients who subscribed to a topic.
 
 ### Stability Patterns
 
