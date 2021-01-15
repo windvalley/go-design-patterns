@@ -52,7 +52,7 @@ The main point is create objects representing various states,
 and a context object whose behavior changes as its internal state object changes.
 - [x] [Iterator](/iterator/)  
 Split complex traversal operations into iterator objects.
-- [ ] [Visitor](/visitor/)  
+- [x] [Visitor](/visitor/)  
 Separates an algorithm from an object on which it operates;
 The element object accepts the visitor object so that the visitor object can handle operations on the element object.
 The intention is to separate data structure from data manipulation.
