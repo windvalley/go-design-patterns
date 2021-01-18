@@ -57,7 +57,7 @@ Separates an algorithm from an object on which it operates;
 The element object accepts the visitor object so that the visitor object can handle operations on the element object.
 The intention is to separate data structure from data manipulation.
 To solve the coupling problem between stable data structure and volatile operation.
-- [ ] [Memento](/memento/)  
+- [x] [Memento](/memento/)  
 Capture the internal state of an object and save this state outside the object, 
 so that the object can be restored to the original state in the future.
 - [ ] [Command](/command/)  
@@ -89,11 +89,6 @@ Yields a sequence of values one at a time.
 Funnels tasks to a work sink (e.g. server).
 - [ ] [Funnel Out](/funnel_out/)  
 Distributes tasks among workers (e.g. producer).
-
-### Stability Patterns
-
-- [ ] [Circuit Breaker](/circuit_breaker/)  
-Stops the flow of the requests when requests are likely to fail.
 
 ### Profiling Patterns
 
