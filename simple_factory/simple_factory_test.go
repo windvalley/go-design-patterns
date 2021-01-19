@@ -2,17 +2,21 @@ package simplefactory
 
 import "testing"
 
-func TestNewProduct(t *testing.T) {
-	tests := []struct{ input, output string }{
-		{"product1", "this is product1"},
-		{"product2", "this is product2"},
-		{"product3", ""},
+func TestFactory_CreateProduct(t *testing.T) {
+	cases := []struct {
+		input  ProductType
+		output string
+	}{
+		{Product1, "this is product1"},
+		{Product2, "this is product2"},
+		{Product3, "this is product3"},
 	}
 
-	for _, v := range tests {
-		product := NewProduct(v.input)
-		if product == nil {
-			t.Logf("no such product: %s", v.input)
+	factory := NewProductFactory()
+	for _, v := range cases {
+		product, err := factory.CreateProduct(v.input)
+		if err != nil {
+			t.Log(err)
 			continue
 		}
 
