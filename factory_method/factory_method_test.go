@@ -1,30 +1,16 @@
 package factorymethod
 
 import (
+	"fmt"
 	"testing"
-
-	"github.com/stretchr/testify/assert"
 )
 
 func TestNewFactory(t *testing.T) {
-	factory := NewFactory()
+	product1Factory := NewProduct1Factory()
+	product1 := product1Factory.CreateProduct()
+	fmt.Println(product1.GetDescription())
 
-	for _, v := range []struct{ input, output string }{
-		{"product1", "this is product1"},
-		{"product2", "this is product2"},
-		{"product3", ""},
-	} {
-		product := factory.CreateProduct(v.input)
-		if product == nil {
-			t.Logf("no such product: %s", v.input)
-			continue
-		}
-
-		assert.Equal(
-			t,
-			product.GetDescription(),
-			v.output,
-			"they should be equal",
-		)
-	}
+	product2Factory := NewProduct2Factory()
+	product2 := product2Factory.CreateProduct()
+	fmt.Println(product2.GetDescription())
 }

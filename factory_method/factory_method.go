@@ -1,36 +1,38 @@
 package factorymethod
 
-// Factory factory
-type Factory interface {
-	CreateProduct(name string) Product
-}
-
-// Product product
+// Product ...
 type Product interface {
 	GetDescription() string
 }
 
-// NewFactory create factory
-func NewFactory() Factory {
-	return &factoryInstance{}
+// Factory ...
+type Factory interface {
+	CreateProduct() Product
 }
 
-type factoryInstance struct {
+type product1Factory struct{}
+
+// NewProduct1Factory ...
+func NewProduct1Factory() Factory {
+	return &product1Factory{}
 }
 
-func (*factoryInstance) CreateProduct(name string) Product {
-	switch name {
-	case "product1":
-		return new(product1)
-	case "product2":
-		return &product2{"product2"}
-	default:
-		return nil
-	}
+func (*product1Factory) CreateProduct() Product {
+	return new(product1)
 }
 
-type product1 struct {
+type product2Factory struct{}
+
+// NewProduct2Factory ...
+func NewProduct2Factory() Factory {
+	return &product2Factory{}
 }
+
+func (*product2Factory) CreateProduct() Product {
+	return &product2{"product2"}
+}
+
+type product1 struct{}
 
 func (*product1) GetDescription() string {
 	return "this is product1"
