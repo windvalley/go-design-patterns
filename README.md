@@ -60,7 +60,7 @@ To solve the coupling problem between stable data structure and volatile operati
 - [x] [Memento](/memento/)  
 Capture the internal state of an object and save this state outside the object, 
 so that the object can be restored to the original state in the future.
-- [ ] [Command](/command/)  
+- [x] [Command](/command/)  
 Bundles a command and arguments to call later.
 - [ ] [Interpreter](/interpreter/)  
 Defines a grammatical representation for a language and provides an interpreter to deal with this grammar.

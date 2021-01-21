@@ -1,6 +1,6 @@
 package builder
 
-// Builder builder
+// Builder ...
 type Builder interface {
 	NewProduct()
 	BuildPartA()
@@ -8,17 +8,32 @@ type Builder interface {
 	GetProduct() interface{}
 }
 
-// Director director
+// Product ...
+type Product struct {
+	content string
+}
+
+// Show product
+func (p *Product) Show() string {
+	return p.content
+}
+
+// Director ...
 type Director struct {
 	builder Builder
 }
 
-// SetBuilder set a builder
+// NewDirector ...
+func NewDirector() *Director {
+	return &Director{}
+}
+
+// SetBuilder ...
 func (d *Director) SetBuilder(builder Builder) {
 	d.builder = builder
 }
 
-// Build build
+// Build ...
 func (d *Director) Build() *Product {
 	d.builder.NewProduct()
 	d.builder.BuildPartA()
@@ -49,14 +64,4 @@ func (b *concreteBuilder) BuildPartB() {
 
 func (b *concreteBuilder) GetProduct() interface{} {
 	return b.product
-}
-
-// Product product
-type Product struct {
-	content string
-}
-
-// Show product
-func (p *Product) Show() string {
-	return p.content
 }

@@ -5,7 +5,7 @@ import "testing"
 func TestBuiler(t *testing.T) {
 	expected := "partapartb"
 
-	director := new(Director)
+	director := NewDirector()
 	builder := NewConcreteBuilder()
 
 	director.SetBuilder(builder)
