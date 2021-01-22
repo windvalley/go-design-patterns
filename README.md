@@ -62,7 +62,7 @@ Capture the internal state of an object and save this state outside the object,
 so that the object can be restored to the original state in the future.
 - [x] [Command](/command/)  
 Bundles a command and arguments to call later.
-- [ ] [Interpreter](/interpreter/)  
+- [x] [Interpreter](/interpreter/)  
 Defines a grammatical representation for a language and provides an interpreter to deal with this grammar.
 - [ ] [Mediator](/mediator/)  
 Mediator connects objects and acts as a proxy.
