@@ -4,13 +4,13 @@ import "fmt"
 
 func ExampleStrategy() {
 	addStrategy := new(Addition)
-	object := NewObject(addStrategy)
+	object := NewContext(addStrategy)
 	result := object.Operate(1, 3)
 
 	fmt.Println(result)
 
-	multiStrategy := new(Multiplication)
-	object = NewObject(multiStrategy)
+	multiStrategy := new(Multiply)
+	object = NewContext(multiStrategy)
 	result = object.Operate(1, 3)
 
 	fmt.Println(result)
