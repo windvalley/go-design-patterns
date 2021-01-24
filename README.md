@@ -64,7 +64,7 @@ so that the object can be restored to the original state in the future.
 Bundles a command and arguments to call later.
 - [x] [Interpreter](/interpreter/)  
 Defines a grammatical representation for a language and provides an interpreter to deal with this grammar.
-- [ ] [Mediator](/mediator/)  
+- [x] [Mediator](/mediator/)  
 Mediator connects objects and acts as a proxy.
 
 ## Other Patterns
