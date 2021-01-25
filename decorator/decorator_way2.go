@@ -1,32 +1,51 @@
 package decorator
 
-// Object ...
-type Object interface {
-	GetScore() int
+import "fmt"
+
+// Component ...
+type Component interface {
+	Operate()
 }
 
-// ConcreteObject concrete object
-type ConcreteObject struct {
-	score int
+// Decorator ...
+type Decorator interface {
+	Component
+	DecorateOn(c Component)
+	Do()
 }
 
-// GetScore implement Object
-func (co *ConcreteObject) GetScore() int {
-	return co.score
+type component1 struct {
+	name string
 }
 
-// ConcreteObjectWithDecorate decorator
-type ConcreteObjectWithDecorate struct {
-	Object
-	scorePlus int
+// NewComponent1 ...
+func NewComponent1() Component {
+	return &component1{"component1"}
 }
 
-// NewConcreteObjectWithDecorate ...
-func NewConcreteObjectWithDecorate(co Object, scorePlus int) Object {
-	return &ConcreteObjectWithDecorate{co, scorePlus}
+func (c *component1) Operate() {
+	fmt.Printf("%s operate\n", c.name)
 }
 
-// GetScore implement Object
-func (cod *ConcreteObjectWithDecorate) GetScore() int {
-	return cod.Object.GetScore() + cod.scorePlus
+type decorator1 struct {
+	c Component
+}
+
+// NewDecorator1 ...
+func NewDecorator1() Decorator {
+	return &decorator1{}
+}
+
+func (d *decorator1) DecorateOn(c Component) {
+	d.c = c
+}
+
+func (d *decorator1) Do() {
+	fmt.Printf("decorate on %v\n", d.c)
+}
+
+func (d *decorator1) Operate() {
+	d.Do()
+	d.c.Operate()
+	d.Do()
 }

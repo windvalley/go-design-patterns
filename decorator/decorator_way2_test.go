@@ -5,10 +5,13 @@ import (
 	"testing"
 )
 
-func TestNewConreteObjectWithDecorate(t *testing.T) {
-	object := &ConcreteObject{50}
-	fmt.Println("pre decorate score: ", object.GetScore())
+func TestDecorator(t *testing.T) {
+	fmt.Println("Before decorate:")
+	c1 := NewComponent1()
+	c1.Operate()
 
-	newObject := NewConcreteObjectWithDecorate(object, 10)
-	fmt.Println("after decorate score: ", newObject.GetScore())
+	fmt.Println("After decorate:")
+	d1 := NewDecorator1()
+	d1.DecorateOn(c1)
+	d1.Operate()
 }
