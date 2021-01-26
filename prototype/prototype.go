@@ -1,43 +1,42 @@
 package prototype
 
-// Prototype prototype
-type Prototype interface {
+// Product ...
+type Product interface {
 	Build()
 	GetName() string
 	GetContent() string
-	Clone() Prototype
+	Clone() Product
 }
 
-// Product product
-type Product struct {
+type productA struct {
 	name    string
 	content string
 }
 
-// NewProduct get an instance of Product
-func NewProduct(name string) Prototype {
-	return &Product{
+// NewProductA ...
+func NewProductA(name string) Product {
+	return &productA{
 		name: name,
 	}
 }
 
 // Build assuming this is a time-consuming task
-func (p *Product) Build() {
+func (p *productA) Build() {
 	p.content = p.name + " some content"
 }
 
-// GetName get product name
-func (p *Product) GetName() string {
+// GetName ...
+func (p *productA) GetName() string {
 	return p.name
 }
 
-// GetContent get product content
-func (p *Product) GetContent() string {
+// GetContent ...
+func (p *productA) GetContent() string {
 	return p.content
 }
 
 // Clone get a cloned product
-func (p *Product) Clone() Prototype {
+func (p *productA) Clone() Product {
 	copyP := *p
 	return &copyP
 }

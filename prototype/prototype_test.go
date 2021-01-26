@@ -7,7 +7,7 @@ import (
 )
 
 func TestPrototype(t *testing.T) {
-	productA := NewProduct("foo")
+	productA := NewProductA("foo")
 	productA.Build()
 
 	productB := productA.Clone()
