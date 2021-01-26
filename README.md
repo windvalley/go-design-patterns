@@ -85,12 +85,21 @@ Yields a sequence of values one at a time.
 
 ### Messaging Patterns
 
-- [ ] [Funnel In](/funnel_in/)  
+- [ ] [Fan In](/fan_in/)  
 Funnels tasks to a work sink (e.g. server).
-- [ ] [Funnel Out](/funnel_out/)  
+- [ ] [Fan Out](/fan_out/)  
 Distributes tasks among workers (e.g. producer).
 
 ### Profiling Patterns
 
-- [ ] [Profile Timing](/profile_timing/)  
+- [ ] [Timing Functions](/timing_functions/)  
 Measure the execution time of some functions for code optimization.
+
+### Idioms
+
+- [ ] [Build Options](/build_options/)
+Optional parameters use chained function calls to construct an object.
+- [ ] [Functional Options](/functional_options/)  
+Allows creating clean APIs with sane defaults and idiomatic overrides.
+- [ ] [Inversion of Control](/inversion_of_control/)  
+Separate the control logic from the business logic. Do not write the control logic in the business logic, because this will make the control logic depend on the business logic, but in turn, let the business logic depend on the control logic.
