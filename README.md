@@ -71,7 +71,7 @@ Mediator connects objects and acts as a proxy.
 
 ### Synchronization Patterns
 
-- [ ] [Semaphore](/semaphore/)  
+- [x] [Semaphore](/semaphore/)  
 Allows controlling access to a common resource.
 
 ### Concurrency Patterns
@@ -102,4 +102,7 @@ Optional parameters use chained function calls to construct an object.
 - [ ] [Functional Options](/functional_options/)  
 Allows creating clean APIs with sane defaults and idiomatic overrides.
 - [ ] [Inversion of Control](/inversion_of_control/)  
-Separate the control logic from the business logic. Do not write the control logic in the business logic, because this will make the control logic depend on the business logic, but in turn, let the business logic depend on the control logic.
+Separate the control logic from the business logic. 
+Do not write the control logic in the business logic, 
+because this will make the control logic depend on the business logic, 
+but in turn, let the business logic depend on the control logic.
