@@ -78,7 +78,7 @@ Allows controlling access to a common resource.
 
 - [x] [Parallelism](/parallelism/)  
 Completes large number of independent tasks.
-- [ ] [Bounded Parallelism](/bounded_parallelism/)  
+- [x] [Bounded Parallelism](/bounded_parallelism/)  
 Completes large number of independent tasks with resource limits.
 - [ ] [Generators](/generators/)  
 Yields a sequence of values one at a time.
