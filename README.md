@@ -80,7 +80,7 @@ Allows controlling access to a common resource.
 Completes large number of independent tasks.
 - [x] [Bounded Parallelism](/bounded_parallelism/)  
 Completes large number of independent tasks with resource limits.
-- [ ] [Generators](/generators/)  
+- [x] [Generators](/generators/)  
 Yields a sequence of values one at a time.
 
 ### Messaging Patterns
