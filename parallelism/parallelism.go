@@ -1,85 +1,78 @@
 package parallelism
 
 import (
-	"crypto/md5"
 	"errors"
-	"io/ioutil"
-	"os"
-	"path/filepath"
 	"sync"
+	"time"
 )
 
 type result struct {
-	path string
-	sum  [md5.Size]byte
-	err  error
+	id  string
+	res string
+	err error
 }
 
-func sumFiles(done <-chan struct{}, root string) (<-chan result, <-chan error) {
-	c := make(chan result)
-	errc := make(chan error, 1)
+func batchDoTask(
+	tasks []string,
+	taskHandler func(task string) result,
+	taskTimeout time.Duration,
+	stop <-chan struct{},
+) <-chan result {
+	resChan := make(chan result)
 
 	go func() {
 		var wg sync.WaitGroup
-		err := filepath.Walk(root, func(path string, info os.FileInfo, err error) error {
-			if err != nil {
-				return err
-			}
-			if !info.Mode().IsRegular() {
-				return nil
-			}
-
+		for _, v := range tasks {
 			wg.Add(1)
-			go func() {
-				data, err := ioutil.ReadFile(path)
+			go func(task string) {
+				done := make(chan struct{})
+				go func() {
+					defer close(done)
+					result := taskHandler(task)
+					resChan <- result
+				}()
+
 				select {
-				case c <- result{path, md5.Sum(data), err}:
 				case <-done:
+				case <-time.After(taskTimeout * time.Second):
+					resChan <- result{task, "", errors.New("task timeout")}
+				case <-stop:
 				}
+
 				wg.Done()
-			}()
+			}(v)
+		}
 
-			// Abort the walk if done is closed.
-			select {
-			case <-done:
-				return errors.New("walk canceled")
-			default:
-				return nil
-			}
-		})
-
-		// Walk has returned, so all calls to wg.Add are done. Start a
-		// goroutine to close c once all the sends are done.
 		go func() {
 			wg.Wait()
-			close(c)
+			close(resChan)
 		}()
-
-		// No select needed here, since errc is buffered.
-		errc <- err
 	}()
 
-	return c, errc
+	return resChan
 }
 
-// MD5All ...
-func MD5All(root string) (map[string][md5.Size]byte, error) {
-	done := make(chan struct{})
-	defer close(done)
+func taskHandler(task string) result {
+	time.Sleep(3 * time.Second)
+	res := task + " done"
 
-	c, errc := sumFiles(done, root)
+	return result{task, res, nil}
+}
 
-	m := make(map[string][md5.Size]byte)
-	for r := range c {
+func getTaskResults(tasks []string, taskTimeout time.Duration) ([]result, error) {
+	stop := make(chan struct{})
+	defer close(stop)
+
+	resCh := batchDoTask(tasks, taskHandler, taskTimeout, stop)
+
+	results := make([]result, 0)
+	for r := range resCh {
 		if r.err != nil {
 			return nil, r.err
 		}
-		m[r.path] = r.sum
+
+		results = append(results, r)
 	}
 
-	if err := <-errc; err != nil {
-		return nil, err
-	}
-
-	return m, nil
+	return results, nil
 }
