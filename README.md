@@ -38,7 +38,7 @@ Reuses existing instances of objects with similar/identical state to minimize re
 
 ## Behavioral Patterns
 
-- [x] [Observer](/behavioral/)  
+- [x] [Observer](/observer/)  
 The observer pattern allows a type instance to publish events to other type instances(observers) who wish to be updated when a particular event occurs.
 - [x] [Template Method](/template_method/)  
 Defines a skeleton class which defers some methods to subclasses.
@@ -47,18 +47,18 @@ Enables an algorithm's behavior to be selected at runtime.
 - [x] [Chain of Responsibility](/chain_of_responsibility/)  
 Avoids coupling a sender to receiver by giving more than object a chance to handle the request.
 - [x] [State](/state/)  
-Encapsulates varying behavior for the same object based on its internal state;
-The main point is create objects representing various states, 
+Encapsulates varying behavior for the same object based on its internal state.
+The main point is create objects representing various states,
 and a context object whose behavior changes as its internal state object changes.
 - [x] [Iterator](/iterator/)  
 Split complex traversal operations into iterator objects.
 - [x] [Visitor](/visitor/)  
-Separates an algorithm from an object on which it operates;
+Separates an algorithm from an object on which it operates.
 The element object accepts the visitor object so that the visitor object can handle operations on the element object.
 The intention is to separate data structure from data manipulation.
 To solve the coupling problem between stable data structure and volatile operation.
 - [x] [Memento](/memento/)  
-Capture the internal state of an object and save this state outside the object, 
+Capture the internal state of an object and save this state outside the object,
 so that the object can be restored to the original state in the future.
 - [x] [Command](/command/)  
 Bundles a command and arguments to call later.
@@ -102,9 +102,9 @@ Optional parameters use chained function calls to construct an object.
 - [ ] [Functional Options](/functional_options/)  
 Allows creating clean APIs with sane defaults and idiomatic overrides.
 - [ ] [Inversion of Control](/inversion_of_control/)  
-Separate the control logic from the business logic. 
-Do not write the control logic in the business logic, 
-because this will make the control logic depend on the business logic, 
+Separate the control logic from the business logic.
+Do not write the control logic in the business logic,
+because this will make the control logic depend on the business logic,
 but in turn, let the business logic depend on the control logic.
 - [ ] [Map Reduce](/map_reduce/)  
 Map, Reduce, and Filter allow us to perform some data processing easily and flexibly.
