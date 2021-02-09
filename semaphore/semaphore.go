@@ -34,7 +34,7 @@ func (s *concreteSemaphore) Acquire() error {
 
 func (s *concreteSemaphore) Release() error {
 	select {
-	case _ = <-s.sema:
+	case <-s.sema:
 		return nil
 	case <-time.After(s.timeout):
 		return ErrIllegalRelease
