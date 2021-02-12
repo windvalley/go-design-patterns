@@ -87,7 +87,7 @@ Yields a sequence of values one at a time.
 
 - [x] [Fan In](/fan_in/)  
 Funnels tasks to a work sink (e.g. server).
-- [ ] [Fan Out](/fan_out/)  
+- [x] [Fan Out](/fan_out/)  
 Distributes tasks among workers (e.g. producer).
 
 ### Profiling Patterns
