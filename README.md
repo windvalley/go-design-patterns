@@ -92,7 +92,7 @@ Distributes tasks among workers (e.g. producer).
 
 ### Profiling Patterns
 
-- [ ] [Timing Functions](/timing_functions/)  
+- [x] [Timing Functions](/timing_functions/)  
 Measure the execution time of some functions for code optimization.
 
 ### Idioms
