@@ -99,7 +99,7 @@ Measure the execution time of some functions for code optimization.
 
 - [x] [Build Options](/build_options/)
 Optional parameters use chained function calls to construct an object.
-- [ ] [Functional Options](/functional_options/)  
+- [x] [Functional Options](/functional_options/)  
 Allows creating clean APIs with sane defaults and idiomatic overrides.
 - [ ] [Inversion of Control](/inversion_of_control/)  
 Separate the control logic from the business logic.
