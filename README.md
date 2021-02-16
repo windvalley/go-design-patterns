@@ -101,7 +101,7 @@ Measure the execution time of some functions for code optimization.
 Optional parameters use chained function calls to construct an object.
 - [x] [Functional Options](/functional_options/)  
 Allows creating clean APIs with sane defaults and idiomatic overrides.
-- [ ] [Inversion of Control](/inversion_of_control/)  
+- [x] [Inversion of Control](/inversion_of_control/)  
 Separate the control logic from the business logic.
 Do not write the control logic in the business logic,
 because this will make the control logic depend on the business logic,
