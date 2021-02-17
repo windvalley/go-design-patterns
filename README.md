@@ -106,5 +106,5 @@ Separate the control logic from the business logic.
 Do not write the control logic in the business logic,
 because this will make the control logic depend on the business logic,
 but in turn, let the business logic depend on the control logic.
-- [ ] [Map Reduce](/map_reduce/)  
+- [x] [Map Reduce](/map_reduce/)  
 Map, Reduce, and Filter allow us to perform some data processing easily and flexibly.
