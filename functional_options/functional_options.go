@@ -15,10 +15,10 @@ type Server struct {
 }
 
 // NewServer ...
-func NewServer(addr string, port int, options ...func(*Server)) (*Server, error) {
+func NewServer(addr string, options ...func(*Server)) (*Server, error) {
 	server := Server{
 		Addr:     addr,
-		Port:     port,
+		Port:     80,
 		Protocol: "tcp",
 		Timeout:  30 * time.Second,
 		MaxConns: 1024,
@@ -35,6 +35,13 @@ func NewServer(addr string, port int, options ...func(*Server)) (*Server, error)
 	// ...
 
 	return &server, nil
+}
+
+// WithPort ...
+func WithPort(p int) func(*Server) {
+	return func(s *Server) {
+		s.Port = p
+	}
 }
 
 // WithProtocol ...

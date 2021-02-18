@@ -97,7 +97,7 @@ Measure the execution time of some functions for code optimization.
 
 ### Idioms
 
-- [x] [Build Options](/build_options/)
+- [x] [Build Options](/build_options/)  
 Optional parameters use chained function calls to construct an object.
 - [x] [Functional Options](/functional_options/)  
 Allows creating clean APIs with sane defaults and idiomatic overrides.
