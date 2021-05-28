@@ -58,21 +58,3 @@ func taskHandler(task string) result {
 
 	return result{task, res, nil}
 }
-
-func getTaskResults(tasks []string, taskTimeout time.Duration) ([]result, error) {
-	stop := make(chan struct{})
-	defer close(stop)
-
-	resCh := batchDoTask(tasks, taskHandler, taskTimeout, stop)
-
-	results := make([]result, 0)
-	for r := range resCh {
-		if r.err != nil {
-			return nil, r.err
-		}
-
-		results = append(results, r)
-	}
-
-	return results, nil
-}
